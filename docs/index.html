@@ -31,7 +31,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* faint topographic dot texture */
   body::before{
     content:"";
     position: fixed;
@@ -53,7 +52,6 @@
   .pixel{ font-family: 'Press Start 2P', monospace; }
   .mono{ font-family: 'JetBrains Mono', monospace; }
 
-  /* ===== HUD player card ===== */
   .hud{
     margin-top: 48px;
     background: var(--panel);
@@ -106,7 +104,6 @@
   }
   .hud-course .sub{ display:block; color: var(--dim); font-size: 10px; margin-top: 3px; text-transform:none; }
 
-  /* ===== Title block ===== */
   .title-block{
     margin: 44px 0 8px;
     text-align: center;
@@ -138,50 +135,6 @@
   }
   .progress span.fill{ background: var(--teal); }
 
-  .lab-list{
-    list-style: none;
-    margin: 0 0 60px;
-    padding: 0;
-    position: relative;
-    z-index: 1;
-  }
-  .lab-list li{
-    margin-bottom: 14px;
-  }
-  .lab-list a{
-    display: block;
-    background: var(--panel);
-    border: 2px solid var(--locked);
-    border-radius: 6px;
-    padding: 16px 20px;
-    color: var(--ink);
-    text-decoration: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    transition: border-color .15s ease, transform .15s ease;
-  }
-  .lab-list a:hover{ border-color: var(--teal); transform: translateY(-2px); }
-  .lab-list a:focus-visible{ outline: 2px solid var(--teal); outline-offset: 2px; }
-  .lab-list a::before{ content: "▶ "; color: var(--teal); }
-
-  .lab-group{
-    position: relative;
-    border: 2px solid var(--locked);
-    border-radius: 8px;
-    padding: 20px 20px 8px;
-    margin-bottom: 28px;
-  }
-  .lab-group-title{
-    position: absolute;
-    top: -11px;
-    left: 16px;
-    background: var(--bg-deep);
-    padding: 0 10px;
-    font-size: 10px;
-    color: var(--amber);
-    letter-spacing: 0.08em;
-  }
-  .lab-group .lab-list{ margin-bottom: 0; }
   .path{
     position: relative;
     padding: 10px 0;
@@ -223,7 +176,6 @@
   .node:hover{ border-color: var(--node-color, var(--teal)); transform: translateY(-3px); }
   .node:focus-visible{ outline: 2px solid var(--teal); outline-offset: 2px; }
 
-  /* connector dot on the path */
   .node-row.left .node::after,
   .node-row.right .node::after{
     content:"";
@@ -255,24 +207,6 @@
     font-weight: 700;
   }
 
-  .node p{
-    font-size: 13px;
-    color: var(--dim);
-    line-height: 1.55;
-    margin: 0 0 14px;
-  }
-
-  .node-tags{ display:flex; flex-wrap:wrap; gap: 6px; margin-bottom: 10px; }
-  .node-tag{
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--ink);
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--locked);
-    padding: 2px 7px;
-    border-radius: 4px;
-  }
-
   .node-cta{
     font-family: 'JetBrains Mono', monospace;
     font-size: 11.5px;
@@ -296,6 +230,7 @@
     letter-spacing: 0.1em;
     display: inline-block;
   }
+
   .finish{
     text-align:center;
     margin-top: 60px;
@@ -356,7 +291,9 @@
     <p>เส้นทางผลงานทั้งหมดในรายวิชา Game Development — แต่ละจุดคืองานหนึ่งชิ้น กดเพื่อเข้าสู่ repository บน GitHub</p>
   </div>
 
-  <div class="progress" id="progress">
+  <div class="progress">
+    <span class="fill"></span>
+    <span class="fill"></span>
     <span class="fill"></span>
     <span class="fill"></span>
     <span class="fill"></span>
@@ -374,12 +311,11 @@
       </a>
     </div>
 
-    <!-- LAB 02 section header -->
+    <!-- LAB 02 -->
     <div class="section-label">
       <span class="pixel">LAB 02</span>
     </div>
 
-    <!-- Game 2-1 -->
     <div class="node-row right">
       <a class="node" style="--node-color:#F2A65A" href="Lab02/game21/game21.html">
         <span class="node-flag pixel">LEVEL 02-1</span>
@@ -388,7 +324,6 @@
       </a>
     </div>
 
-    <!-- Game 2-2 -->
     <div class="node-row left">
       <a class="node" style="--node-color:#F2A65A" href="Lab02/game22/game22.html">
         <span class="node-flag pixel">LEVEL 02-2</span>
@@ -397,12 +332,11 @@
       </a>
     </div>
 
-    <!-- LAB 03 section header -->
+    <!-- LAB 03 -->
     <div class="section-label">
       <span class="pixel">LAB 03</span>
     </div>
 
-    <!-- Lab03 -->
     <div class="node-row right">
       <a class="node" style="--node-color:#4FD1C5" href="Lab03/lab03.html">
         <span class="node-flag pixel">LEVEL 03</span>
@@ -411,16 +345,41 @@
       </a>
     </div>
 
-    <!-- LAB 04 section header -->
+    <!-- LAB 04 -->
     <div class="section-label">
       <span class="pixel">LAB 04</span>
     </div>
 
-    <!-- Lab04 -->
     <div class="node-row left">
       <a class="node" style="--node-color:#F2A65A" href="https://siwakorniq.github.io/GameLab4/" target="_blank" rel="noopener">
         <span class="node-flag pixel">LEVEL 04</span>
         <h3>Game Lab 4</h3>
+        <span class="node-cta mono">เปิดงาน</span>
+      </a>
+    </div>
+
+    <!-- GROUP PROJECT -->
+    <div class="section-label">
+      <span class="pixel">GROUP PROJECT</span>
+    </div>
+
+    <div class="node-row right">
+      <a class="node" style="--node-color:#9C97C4" href="https://phiraphatkhamthanet.github.io/gamedev69-01/Midnight-Story-Spooky-School-Edition/index.html" target="_blank" rel="noopener">
+        <span class="node-flag pixel">BOSS STAGE</span>
+        <h3>Midnight Story</h3>
+        <span class="node-cta mono">เปิดเกม</span>
+      </a>
+    </div>
+
+    <!-- LAB 05 -->
+    <div class="section-label">
+      <span class="pixel">LAB 05</span>
+    </div>
+
+    <div class="node-row right">
+      <a class="node" style="--node-color:#D9C6A5" href="Lab05/Lab5.html">
+        <span class="node-flag pixel">LEVEL 05</span>
+        <h3>Lab05</h3>
         <span class="node-cta mono">เปิดงาน</span>
       </a>
     </div>
@@ -438,8 +397,5 @@
 
 </div>
 
-
-
 </body>
-
 </html>
