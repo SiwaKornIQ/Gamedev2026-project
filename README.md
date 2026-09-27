@@ -1,6 +1,6 @@
 # Gamedev2026-project
 Name: Siwakorn Sangpara
-ชื่อ: นายศิวกร แสงภารา 
+\nชื่อ: นายศิวกร แสงภารา 
 Student ID / รหัสนักศึกษา: 683380099-0
 KKU
 
