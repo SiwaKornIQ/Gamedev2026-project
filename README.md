@@ -1,3 +1,7 @@
 # Gamedev2026-project
+Name: Siwakorn Sangpara  
+ชื่อ: นายศิวกร แสงภารา  
+Student ID / รหัสนักศึกษา: 683380099-0  
+CP-CS KKU
 
 - [Lab Project](https://siwakorniq.github.io/Gamedev2026-project/)
